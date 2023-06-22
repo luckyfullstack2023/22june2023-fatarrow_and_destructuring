@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecture 45 - Javascript ES6 Destructuring and Fat Arrow Function</title>
+    <script></script>
 </head>
 <body>
     
+
+    <script>
+        // 1.Define
+        function myFunctionA(...n1){  //old-way  1995-to-2023
+            // This is function body
+            // statement
+            console.log('-->',n1[0]);
+            // Every function may return something number , string, array, object,funciton it can be anything
+            return 10+n1[0];//i am return number
+        }
+        // New way ES-6 2015 Fat Arrow myFunctionB
+        let myFunctionB = (...n2) =>{ //n2 is a formal argument with rest operator
+            console.log(n2[0]);
+            var a=20; //Local Variable
+            // Every function return something
+            return a + n2[0];
+        }
+        let myFunctionC = n3 =>{  //n3 is formal argument
+            console.log(n3);
+            // Every function return something
+        }
+
+        let myFunctionD = (n4,n5 )=>{  //n3 is formal argument
+           console.log(n4+n5);
+            // Every function return something
+        }
+
+
+        // 2.Call
+        let x = myFunctionA(1);
+        console.log(x);
+
+        var y = myFunctionB(2);
+        console.log(y);
+
+        console.log(x+y);
+
+        myFunctionC(50);
+
+        myFunctionD(5,4);
+    </script>
 </body>
 </html>
